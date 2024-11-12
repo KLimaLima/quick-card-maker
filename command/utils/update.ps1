@@ -43,10 +43,13 @@ $my_result = $my_data -match '([\w\W]).+\[gone\]'
 
 # $Matches[1]
 
-foreach ($final_result in $my_result) {
-   <# $my_result is the current item #>
-   $final_result -match '([\w-_]+) [\w\d]*'
-   Write-Host "Deleting this"
-   $Matches[1]
-   git branch -d $Matches[1]
+if ($my_result)
+{
+   foreach ($final_result in $my_result) {
+      <# $my_result is the current item #>
+      $final_result -match '([\w-_]+) [\w\d]*'
+      Write-Host "Deleting this"
+      $Matches[1]
+      git branch -d $Matches[1]
+   }
 }
