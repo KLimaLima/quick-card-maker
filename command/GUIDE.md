@@ -1,7 +1,7 @@
-cara guna:
+## Cara guna:
 .\command\\{command bawah yg nak guna}
 
-list command:
+ ## List command:
 - resume.ps1 => bila nak sambung kerja sebelumnya
 - new.ps1 => bila nak start develop code di branch yg asing (elakkan kacau main branch)
 - save.ps1 => bila nak sambung kerja lain kali
